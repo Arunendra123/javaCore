@@ -1,0 +1,41 @@
+1. // - It is called as single Line comment
+	- Comments only one line
+	Ex: //Java Essential Etatements
+
+2. /*    */ - It is called as multiline comment
+    -------	                  -----------------------
+	- comments single or multiple lines
+	Ex:
+	/*
+	class is the mandatory BPE
+	main is initial point of class execution
+	*/
+3. /** */ - It is called as Document comment
+	- Used to provide doumentation with some requited annotatted tags
+	Ex:
+	/**
+	 * This class is developed to handle helper logic
+	 * 
+	 * @author = HariKrishna 
+	 * @Since = rt 1.0
+	 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 	

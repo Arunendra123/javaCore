@@ -1,0 +1,28 @@
+11. class Snoochy {
+12. Boochy booch;
+13. public Snoochy() { booch = new Boochy(this); }
+14. }
+15.
+16. class Boochy {
+17. Snoochy snooch;
+18. public Boochy(Snoochy s) { snooch = s; }
+19. }
+
+And the statements:
+21. public static void main(String[] args) {
+22. Snoochy snoog = new Snoochy();
+23. snoog = null;
+24. // more code here
+25. }
+
+Which statement is true about the objects referenced by snoog,
+snooch, and booch immediately after line 23 executes?
+A. None of these objects are eligible for garbage collection.
+B. Only the object referenced by booch is eligible for garbage
+collection.
+C. Only the object referenced by snoog is eligible for garbage
+collection.
+D. Only the object referenced by snooch is eligible for garbage
+collection.
+E. The objects referenced by snooch and booch are eligible for garbage
+collection.

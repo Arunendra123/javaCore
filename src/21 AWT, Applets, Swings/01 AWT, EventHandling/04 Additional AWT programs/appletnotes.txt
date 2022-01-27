@@ -1,0 +1,38 @@
+The restrictions are:
+- Applet cannot Read/Write on to client disk.
+- Applet cannot access the client resources like .jpg, .gif or audio/video files etc. It has to bring req. resources with itself.
+- Cannot read & send back the IP-Address of the client. Can access only the IP Addr. of the server from which it is instantiated.
+- It cannot communicate to any other server except for it's server from which it is instantiated.
+The Applet is executed by a JIT interpretor (Just Intime Translator) available in browser. The execution of applet begins from 
+     public void init() method. 
+Applet superclass provides no GUI to the program but provide the applet life-cycle methods. The methods are:
+1. p v init(): It is the initialization method. Executes only once when applet is loaded. Used for setting up resources required for applet execution.
+2. p v start(): It is executed many times. It is used to startup resources that are required during app. runtime.Ex: Threads. start() executes whenever applet comes into view. For example:
+  - when applet screen is restored after      minimizing.
+ - when user goes to another page and       returns back to the page.
+
+3. p v paint(Graphics var): It is one of the life-cycle methods of applet but is not from Applet superclass. paint() is provided by Container class. It draws the graphical information on applet. The Graphics class provides information like x-axis,y-axis etc to applet methods. Executes many times.
+- When applet is resized.
+- When applet is restored.
+- When applet receives focus.
+- When applet is uncovered by    another window.
+4. p v stop(): used for stopping resources that are not required when applet is not in view. Executes many times. 
+- When applet window is minimized.
+- When user moves to another page     thru link.
+5. p v destroy(): executes only once when applet is closed. Used to release resources that were initialized at init() method.
+
+Applet Tag:
+<Applet 
+    *code="AppletClassName"
+    codebase="ClassLocation"
+    documentbase="HtmlLocation"
+    *width="AppletWidthPX"
+    *height="AppletHeightPX"
+    archive="JarFile"
+    align="Left|Center|Right"
+    Hspace="horizontalspacePX"
+    Vspace="VerticalspacePX">
+ [<param name="parametername" value="paramvalue">
+  ......
+ <param name="parametername" value="paramvalue">]
+</Applet>

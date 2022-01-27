@@ -1,0 +1,17 @@
+javac -d <path to copy pacakge> <java file name>
+
+Ex: placing package in current working directory
+	>javac -d . Example.java
+
+Ex: placing package in C:\abc directory
+	>javac -d C:\abc Example.java
+
+Rule: abc directory should be existed, else it leads compile time error
+
+pacakgeexamples>java pack.Example
+Exception in thread "main" java.lang.NoClassDefFoundError: pack/Example
+
+pacakgeexamples>set classpath=%classpath%;C:\abc
+
+pacakgeexamples>java pack.Example
+package demo
